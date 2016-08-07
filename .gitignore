@@ -1,0 +1,7 @@
+# no dependancies
+node_modules/
+recipies/
+
+
+# no mobi files please
+*.mobi

@@ -1,0 +1,19 @@
+{
+  "name": "nindle",
+  "version": "1.0.0",
+  "description": "node script to send rss to your kindle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "kindle",
+    "news",
+    "rss"
+  ],
+  "author": "Chris Morris",
+  "license": "MIT",
+  "dependencies": {
+    "winston": "^2.2.0"
+  }
+}
