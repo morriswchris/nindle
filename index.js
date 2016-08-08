@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 let program = require("commander");
 let pkg = require("./package.json");
 let configure = require("./lib/configure");
