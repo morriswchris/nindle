@@ -4,7 +4,8 @@
   "description": "node script to send rss to your kindle",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "add": "node index.js add recipes"
   },
   "keywords": [
     "kindle",
@@ -16,6 +17,8 @@
   "dependencies": {
     "commander": "^2.9.0",
     "inquirer": "^1.1.2",
+    "request": "^2.74.0",
+    "unzip": "^0.1.11",
     "winston": "^2.2.0"
   }
 }
