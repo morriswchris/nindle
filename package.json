@@ -1,12 +1,13 @@
 {
   "name": "nindle",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "node script to send rss to your kindle",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "add": "node index.js add recipes"
   },
+  "bin": "./index.js",
   "keywords": [
     "kindle",
     "news",
