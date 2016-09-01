@@ -18,8 +18,8 @@
   "dependencies": {
     "commander": "^2.9.0",
     "inquirer": "^1.1.2",
-    "request": "^2.74.0",
     "unzip": "^0.1.11",
+    "wget": "0.0.1",
     "winston": "^2.2.0"
   }
 }

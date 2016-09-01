@@ -16,8 +16,11 @@ program
     "creates your default install config to be able to run simple commands")
   .alias("init")
   .action(configure)
-  .command("add recipe")
-  .alias("add recipes")
-  .action(recipes);
+  .command("add")
+  .alias("add recipe")
+  .action(recipes.add)
+  .command("list")
+  .alias("recipes")
+  .action(recipes.list);
 
 program.parse(process.argv);
