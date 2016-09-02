@@ -7,20 +7,35 @@ let recipes = require("./lib/recipes");
 let calibre = require("./lib/calibre");
 
 program
-  .version(pkg.version)
-  .command("<recipe>", "Run the given <recipe>.")
+  .version(pkg.version);
+
+program
+  .command("run <recipe>")
+  .description("Run the given <recipe>.")
   .action((recipe) => {
     calibre(recipe);
-  })
-  .command("initialize",
-    "creates your default install config to be able to run simple commands")
-  .alias("init")
-  .action(configure)
+  });
+
+program
+  .command("init")
+  .alias("initialize")
+  .description("Build the initial config file for setting up defaults")
+  .action(configure);
+
+program
   .command("add")
   .alias("add recipe")
-  .action(recipes.add)
+  .description("Add a recipe to your config")
+  .action(recipes.add);
+
+program
   .command("list")
   .alias("recipes")
+  .description("List currently install recipes")
   .action(recipes.list);
 
 program.parse(process.argv);
+
+if (!process.argv.slice(2).length) {
+  program.outputHelp();
+}
