@@ -37,7 +37,7 @@ existing recipe found on the calibre repo
 
 To generate your news .mobi file, you will need to have setup some
 recipes. Once that is complete, you can easily generate your news file
-by running `nindle <recipe name>`. The recipe name will pull the
+by running `nindle run <recipe name>`. The recipe name will pull the
 appropriate recipe file from the folder specified during nindle init. If
 you have configured the SMPT settings, at this time nindle will email
 you the news .mobi file.
@@ -47,7 +47,3 @@ you the news .mobi file.
 Currently there are future plans to implement a cron tab generator but
 for now if you require automation, you can manually schedule the nindle
 command per recipe in your cron tab by editing `crontab -e`!
-
-
-
-
