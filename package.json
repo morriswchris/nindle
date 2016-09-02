@@ -1,13 +1,16 @@
 {
   "name": "nindle",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "node script to send rss to your kindle",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "list": "node index.js list",
     "add": "node index.js add recipes"
   },
-  "bin": "./index.js",
+  "bin": {
+    "nindle": "./index.js"
+  },
   "keywords": [
     "kindle",
     "news",
@@ -21,5 +24,14 @@
     "unzip": "^0.1.11",
     "wget": "0.0.1",
     "winston": "^2.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morriswchris/nindle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/morriswchris/nindle/issues"
+  },
+  "homepage": "https://github.com/morriswchris/nindle#readme"
 }
