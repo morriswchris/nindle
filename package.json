@@ -1,6 +1,6 @@
 {
   "name": "nindle",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "node script to send rss to your kindle",
   "main": "index.js",
   "scripts": {
