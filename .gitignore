@@ -1,7 +1,7 @@
 # no dependancies
 node_modules/
 recipes/
-
+.nindle/
 
 # no mobi files please
 *.mobi
