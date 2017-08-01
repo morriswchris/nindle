@@ -1,0 +1,15 @@
+{
+  "name": "Nindle",
+  "description": "Send rss to your kindle - via calibre",
+  "website": "https://github.com/morriswchris/nindle",
+  "addons": ["scheduler:standard"],
+  "env": {},
+  "scripts": {
+    "postdeploy": "npm install"
+  },
+  "buildpacks": [{
+    "url": "heroku/python"
+  }, {
+    "url": "https://github.com/kiskolabs/heroku-buildpack-calibre.git"
+  }]
+}
