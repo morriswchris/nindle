@@ -37,20 +37,15 @@ ENV PATH $PATH:/home/$USER/tools/node-v$NODE_VERSION-linux-x64/bin
 
 # Get project
 ENV PROJECT_DIRECTORY /home/$USER/nindle
-RUN cd \
-    && mkdir -p $PROJECT_DIRECTORY/ \
-    && cd $PROJECT_DIRECTORY \
-    && git init \
-    && git remote add origin https://github.com/morriswchris/nindle.git \
-    && git pull origin master \
-    && npm install
+COPY . $PROJECT_DIRECTORY
 
-RUN chmod \+x $PROJECT_DIRECTORY/index.js
-
-COPY .nindle/ /home/$USER/.nindle
 USER root
-RUN chown \-R $USER:$USER /home/$USER/.nindle
+RUN cd $PROJECT_DIRECTORY && npm install
+RUN chmod \+x $PROJECT_DIRECTORY/index.js
+# RUN chown \-R $USER:$USER /home/$USER/.nindle
 USER $USER
+
+WORKDIR /home/nodejs/nindle
 
 # expose our app entry point
 ENTRYPOINT ["/home/nodejs/nindle/index.js"]
