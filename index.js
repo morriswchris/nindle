@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 let program = require("commander");
+let server = require("./lib/server");
 let pkg = require("./package.json");
 let configure = require("./lib/configure");
 let recipes = require("./lib/recipes");
@@ -33,6 +34,11 @@ program
   .alias("recipes")
   .description("List currently install recipes")
   .action(recipes.list);
+
+program
+  .command("server")
+  .description("Starts a server that allows you to request recipes to run. Exposed url is in the format of `/run/<recipe_name>`")
+  .action(server);
 
 program.parse(process.argv);
 
