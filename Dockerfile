@@ -42,10 +42,15 @@ COPY . $PROJECT_DIRECTORY
 USER root
 RUN cd $PROJECT_DIRECTORY && npm install
 RUN chmod \+x $PROJECT_DIRECTORY/index.js
-# RUN chown \-R $USER:$USER /home/$USER/.nindle
+RUN mkdir home/$USER/.nindle
+COPY .nindle/ /home/$USER/.nindle
+RUN chown \-R $USER:$USER /home/$USER/.nindle
+
 USER $USER
 
 WORKDIR /home/nodejs/nindle
 
 # expose our app entry point
-ENTRYPOINT ["/home/nodejs/nindle/index.js"]
+ENV PORT 8080
+EXPOSE 8080
+CMD [ "node", "/home/nodejs/nindle/index.js", "server" ]
