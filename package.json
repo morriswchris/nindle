@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "list": "node index.js list",
-    "add": "node index.js add recipes"
+    "add": "node index.js add recipes",
+    "push": "heroku container:push web --app nindle-docker",
+    "release": "heroku container:release web --app nindle-docker"
   },
   "bin": {
     "nindle": "./index.js"
